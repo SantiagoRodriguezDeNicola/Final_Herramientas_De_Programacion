@@ -37,7 +37,7 @@ namespace Final.Controllers
 
             return persons != null ? 
             View(persons) :
-            Problem("Entity set 'AlbumContext.Artist'  is null.");
+            Problem("Entity set 'ClotheContext.Person'  is null.");
         }
 
         public IActionResult Stock(int? id)
