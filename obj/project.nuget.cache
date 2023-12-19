@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d6XJg0yV9PsEBa7BBCgyh3co1YJY6Oyp0r8z1ro1iqVjZDpMu2IV3IjfMIM+xlW2mec+AUItl8s9c5HB8YuGWA==",
+  "dgSpecHash": "Z74T3Fq3Rs7GgEQXef0HwrfaiOb/GR58zCOIWTqV+F2zvxS9YgIyTKaNKXKNNXEa7FQ9CV3X6Ve+QnGvkI9dDA==",
   "success": true,
-  "projectFilePath": "C:\\Herramientas de programacion\\Final\\Final.csproj",
+  "projectFilePath": "c:\\Herramientas de programacion\\Final\\Final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

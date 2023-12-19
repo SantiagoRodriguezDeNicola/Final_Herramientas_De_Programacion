@@ -26,7 +26,6 @@ namespace Final.Controllers
         }
 
         [Authorize(Roles = "admin, empleado")]
-        // GET: Album
         public IActionResult Index(string? nameFilter)
         {
             ClotheViewModel clothes;
@@ -42,7 +41,6 @@ namespace Final.Controllers
             Problem("Entity set 'ClotheContext.Clothe'  is null.");
         }
 
-        // GET: Album/Details/5
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -60,7 +58,6 @@ namespace Final.Controllers
             return View(clothe);
         }
 
-        // GET: Album/Create
         public IActionResult Create()
         {
             ClotheCreateViewModel model = new ClotheCreateViewModel();
@@ -69,9 +66,6 @@ namespace Final.Controllers
             return View(model);
         }
 
-        // POST: Album/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(ClotheCreateViewModel model)
@@ -84,7 +78,6 @@ namespace Final.Controllers
             return View(model.Clothe);
         }
 
-        // GET: Album/Edit/5
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -100,9 +93,6 @@ namespace Final.Controllers
             return View(clothe);
         }
 
-        // POST: Album/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, ClotheCreateViewModel model)
@@ -134,7 +124,6 @@ namespace Final.Controllers
             return View(model.Clothe);
         }
 
-        // GET: Album/Delete/5
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -152,7 +141,6 @@ namespace Final.Controllers
             return View(clothe);
         }
 
-        // POST: Album/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)

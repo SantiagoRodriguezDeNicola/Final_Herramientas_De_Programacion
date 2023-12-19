@@ -25,7 +25,6 @@ namespace Final.Controllers
             _clotheService = clotheService;
         }
 
-        // GET: Stock
         public IActionResult Index()
         {
             var stocks = _stockService.GetAll();
@@ -34,7 +33,7 @@ namespace Final.Controllers
             Problem("Entity set 'AlbumContext.Stock'  is null.");
         }
 
-        // GET: Stock/Details/5
+
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -53,7 +52,7 @@ namespace Final.Controllers
         }
 
         [Authorize(Roles = "admin, empleado")]
-        // GET: Stock/Create
+
         public IActionResult Create(int id)
         {
             StockCreateViewModel stockCreate = new StockCreateViewModel();
@@ -64,9 +63,6 @@ namespace Final.Controllers
             return View(stockCreate);
         }
 
-        // POST: Stock/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("Id,AlbumId,ArtistId,Quantity")] Stock stock)
@@ -88,7 +84,7 @@ namespace Final.Controllers
         }
 
         [Authorize(Roles = "admin, empleado")]
-        // GET: Stock/Edit/5
+
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -105,9 +101,6 @@ namespace Final.Controllers
             return View(stock);
         }
 
-        // POST: Stock/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, [Bind("Id,CLotheId,BrandId,Quantity")] Stock stock)
@@ -140,7 +133,7 @@ namespace Final.Controllers
         }
 
         [Authorize(Roles = "admin, empleado")]
-        // GET: Stock/Delete/5
+
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -158,7 +151,6 @@ namespace Final.Controllers
             return View(stock);
         }
 
-        // POST: Stock/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)

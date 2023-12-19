@@ -24,7 +24,6 @@ namespace Final.Controllers
             _personService = personService;
         }
 
-        // GET: Artist
         public IActionResult Index(string nameFilter)
         {
             PersonViewModel persons;
@@ -58,7 +57,6 @@ namespace Final.Controllers
             return View(person);
         }
 
-        // GET: Artist/Details/5
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -89,9 +87,6 @@ namespace Final.Controllers
             return View();
         }
 
-        // POST: Artist/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("Id,Name,LastName,Birthdate,Weist")] Person person)
@@ -105,7 +100,7 @@ namespace Final.Controllers
         }
 
         [Authorize(Roles = "admin, empleado")]
-        // GET: Artist/Edit/5
+
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -121,9 +116,6 @@ namespace Final.Controllers
             return View(person);
         }
 
-        // POST: Artist/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, [Bind("Id,Name,LastName,Birthdate,Weist")] Person person)
@@ -156,7 +148,6 @@ namespace Final.Controllers
         }
 
         [Authorize(Roles = "admin, empleado")]
-        // GET: Artist/Delete/5
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -174,15 +165,6 @@ namespace Final.Controllers
             return View(person);
         }
 
-
-        /*
-        Este es un método que maneja la eliminación de un artista junto con su stock asociado. 
-        Primero, se verifica si la tabla de Artist existe. Luego, se utiliza el método Include para 
-        cargar los datos de la tabla Stock y Album relacionados con el artista que se va a eliminar. 
-        Luego, se utiliza el método RemoveRange para eliminar todo el stock del artista y finalmente 
-        se elimina al artista de la tabla Artist.
-        */
-        // POST: Artist/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)

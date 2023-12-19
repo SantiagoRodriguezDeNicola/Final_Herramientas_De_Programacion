@@ -257,3 +257,4 @@ C:\Herramientas de programacion\Final\obj\Debug\net8.0\refint\Final.dll
 C:\Herramientas de programacion\Final\obj\Debug\net8.0\Final.pdb
 C:\Herramientas de programacion\Final\obj\Debug\net8.0\Final.genruntimeconfig.cache
 C:\Herramientas de programacion\Final\obj\Debug\net8.0\ref\Final.dll
+C:\Herramientas de programacion\Final\obj\Debug\net8.0\Final.sourcelink.json

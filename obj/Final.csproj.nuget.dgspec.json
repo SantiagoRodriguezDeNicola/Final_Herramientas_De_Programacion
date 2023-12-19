@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Herramientas de programacion\\Final\\Final.csproj": {}
+    "c:\\Herramientas de programacion\\Final\\Final.csproj": {}
   },
   "projects": {
-    "C:\\Herramientas de programacion\\Final\\Final.csproj": {
+    "c:\\Herramientas de programacion\\Final\\Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Herramientas de programacion\\Final\\Final.csproj",
+        "projectUniqueName": "c:\\Herramientas de programacion\\Final\\Final.csproj",
         "projectName": "Final",
-        "projectPath": "C:\\Herramientas de programacion\\Final\\Final.csproj",
+        "projectPath": "c:\\Herramientas de programacion\\Final\\Final.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Herramientas de programacion\\Final\\obj\\",
+        "outputPath": "c:\\Herramientas de programacion\\Final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
