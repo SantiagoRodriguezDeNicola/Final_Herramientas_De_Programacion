@@ -1,0 +1,26 @@
+@using Microsoft.AspNetCore.Identity;
+@using Final.ViewModels;
+@model RoleCreateViewModel;
+
+<h4>Eliminar rol</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DeleteRole">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RoleName" class="control-label"></label>
+                <input asp-for="RoleName" class="form-control" readonly/>
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Eliminar" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+</div>

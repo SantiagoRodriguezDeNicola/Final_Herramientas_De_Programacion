@@ -1,0 +1,68 @@
+@using Final.ViewModels;
+
+@model ClotheCreateViewModel;
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crear nueva Prenda</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Clothe.Name" class="control-label"></label>
+                <input asp-for="Clothe.Name" class="form-control" />
+                <span asp-validation-for="Clothe.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clothe.Description" class="control-label"></label>
+                <textarea asp-for="Clothe.Description" class="form-control" maxlength="2500" rows="4"></textarea>
+                <span asp-validation-for="Clothe.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clothe.Price" class="control-label"></label>
+                <input asp-for="Clothe.Price" class="form-control" />
+                <span asp-validation-for="Clothe.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clothe.Weist" class="control-label"></label>
+                <select asp-for="Clothe.Weist" class="form-control">
+                    <option value="0">XXL</option>
+                    <option value="1">XL</option>
+                    <option value="2">L</option>
+                    <option value="2">M</option>
+                    <option value="2">S</option>
+                </select>
+                <span asp-validation-for="Clothe.Weist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Seleccione la lista de canciones</label>
+                <select multiple name="SelectedSongs" class="form-control">
+                    @if (Model.Brands != null)
+                    {
+                        @foreach (var song in Model.Brands)
+                        {
+                            <option value="@song.Id">@song.Name</option>
+                        }
+                    }else{
+                        <option value="">No hay Marcas disponibles</option>
+                    }                   
+                </select>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
